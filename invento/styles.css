@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(146, 1, 182);
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 0, 106);
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px rgb(255, 0, 106);
+    animation: animate .7s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(-45deg) scale(1.05);
+    }
+    50% {
+        transform: rotate(-45deg) scale(1.0);
+    }    
+    100% {
+        transform: rotate(-45deg) scale(0.7);
+    }
+}
+
+.heart::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 0, 106);
+    border-radius: 50%;
+    box-shadow: -10px -10px 90px rgb(255, 0, 106);
+}
+
+.heart::after {
+    content: '';
+    position: absolute;
+    right: -50%;
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 0, 106);
+    border-radius: 50%;
+    box-shadow: 10px 10px 90px rgb(255, 0, 106);
+}
+
+.contenedor1 {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .contenedor2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mensaje {
+    margin-top: 50px;
+    font-size: 40px;
+    color: white;
+    font-family: "Momo Signature", cursive;
+  }
+
+  .momo-signature-regular {
+    font-weight: 100px;
+    font-style: normal;
+  }
+
+  .texto {
+    margin-top: 15px;
+    font-size: 15px;
+    color: white;
+    font-family: "Momo Signature", cursive;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .texto1 {
+    margin-top: 15px;
+    font-size: 15px;
+    color: white;
+    font-family: "Momo Signature", cursive;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .texto2 {
+    margin-top: 15px;
+    font-size: 30px;
+    color: white;
+    font-family: "Momo Signature", cursive;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .boton{
+    margin-top: 25px;
+  }
+
+  @media (max-width: 768px) {
+    .body{
+      flex-direction: column;
+    }
+  }
