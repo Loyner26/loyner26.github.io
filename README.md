@@ -1,1 +1,1 @@
-# loyner26.github.io
+tittle: paratimiamor
